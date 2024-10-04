@@ -49,15 +49,6 @@ def win_check(g):
     elif  g[0] == g[1] == g[2] == "O" or g[3] == g[4] == g[5] == "O" or g[6] == g[7] == g[8] == "O" or g[0] == g[3] == g[6] == "O" or g[1] == g[4] == g[7] == "O" or g[2] == g[5] == g[8]  == "O" or g[0] == g[4] == g[8] == "O" or g[2] == g[4] == g[6] == "O":
         return "O"
 
-def display_board(b):
-    print('\n')
-    print(f" {b[0]} | {b[1]} | {b[2]} ")
-    print("---|---|---")
-    print(f" {b[3]} | {b[4]} | {b[5]} ")
-    print("---|---|---")
-    print(f" {b[6]} | {b[7]} | {b[8]} ")
-    print('\n')
-
 def alter_board(mark,position,gameboard):
     d = {1:0,2:1,3:2,4:3,5:4,6:5,7:6,8:7,9:8}
     gameboard[d[position]] = mark
